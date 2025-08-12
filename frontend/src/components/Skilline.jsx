@@ -35,7 +35,8 @@ function Skilline() {
 
     </div>
   <div className="flex flex-col md:flex-row items-center justify-center px-6 py-12 md:px-16 my-12">
-  {/* Left Text Content */}
+
+
   <div className="md:w-1/2 ">
     <Tittle 
       text1="Everything you can do in a physical classroom," 
@@ -47,7 +48,6 @@ function Skilline() {
     <a href="#" className="underline text-[#252641] font-medium mt-3 inline-block">Learn more</a>
   </div>
 
-  {/* Right Image Content */}
   <div className="md:w-1/2 flex justify-center">
     <img 
       src={assets.teacher} 

@@ -7,7 +7,7 @@ function NavBar() {
 
     return (
         <div className="flex items-center justify-between py-3 px-4 sm:px-6 lg:px-8 font-medium bg-[#FFF2E1]">
-            {/* Logo */}
+    
             <Link
                 to="/"
                 className="flex-shrink-0 transition-transform duration-300 hover:scale-105"
@@ -20,7 +20,6 @@ function NavBar() {
                 />
             </Link>
 
-            {/* Desktop Navigation */}
             <ul className='hidden md:flex gap-6 lg:gap-8 xl:gap-12 text-sm lg:text-base xl:text-lg text-gray-700'>
                 <NavLink to={'/'} className='flex flex-col items-center gap-1 hover:text-[#F48C06] transition-colors duration-200'>
                     <p>Home</p>
@@ -40,9 +39,7 @@ function NavBar() {
                 </NavLink>
             </ul>
 
-            {/* Right side buttons and menu */}
             <div className='flex items-center gap-2 sm:gap-4'>
-                {/* Login/Signup buttons - hidden on small screens */}
                 <div className='hidden sm:flex items-center gap-2 lg:gap-3'>
                     <Link to='/login'>
                         <button className="relative overflow-hidden border-2 border-[#F48C06] text-[#F48C06] px-3 py-2 sm:px-4 sm:py-2.5 lg:px-5 rounded-full font-medium text-sm lg:text-base transition-all duration-300 hover:text-white hover:scale-105 group">
@@ -58,7 +55,6 @@ function NavBar() {
                     </Link>
                 </div>
 
-                {/* Mobile menu button */}
                 <img
                     onClick={() => setVisible(true)}
                     src={assets.menu_icon}
@@ -67,16 +63,13 @@ function NavBar() {
                 />
             </div>
 
-            {/* Mobile Sidebar Menu */}
             <div className={`fixed top-0 right-0 bottom-0 bg-white shadow-lg z-50 transition-all duration-300 ${visible ? 'w-64 sm:w-72' : 'w-0'} overflow-hidden md:hidden`}>
                 <div className='flex flex-col text-gray-600 h-full'>
-                    {/* Back button */}
+          
                     <div onClick={() => setVisible(false)} className="flex items-center gap-4 p-4 cursor-pointer border-b hover:bg-gray-50">
                         <img src={assets.dropdown_icon} className='h-4 rotate-180' alt="" />
                         <p className="font-medium">Back</p>
                     </div>
-
-                    {/* Navigation Links */}
                     <div className="flex-1">
                         <NavLink
                             onClick={() => setVisible(false)}
@@ -108,7 +101,6 @@ function NavBar() {
                         </NavLink>
                     </div>
 
-                    {/* Mobile Login/Signup buttons */}
                     <div className="p-4 border-t bg-gray-50">
                         <Link to='/login' onClick={() => setVisible(false)}>
                             <button className="w-full mb-3 border-2 border-[#F48C06] text-[#F48C06] py-3 rounded-full font-medium transition-all duration-300 hover:bg-[#F48C06] hover:text-white">
@@ -123,8 +115,6 @@ function NavBar() {
                     </div>
                 </div>
             </div>
-
-            {/* Overlay for mobile menu */}
             {visible && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"

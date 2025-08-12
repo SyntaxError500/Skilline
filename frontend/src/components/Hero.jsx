@@ -6,10 +6,8 @@ function Hero() {
   return (
     <div className="relative bg-[#FFF2E1] overflow-hidden">
 
-      {/* Main Hero Content */}
       <div className="flex flex-col-reverse sm:flex-row items-center justify-between px-4 sm:px-10 lg:px-20 py-12">
         
-        {/* Left Content */}
         <div className="w-full sm:w-1/2 flex flex-col justify-center items-start text-center sm:text-left text-[#414141]">
           <div className='w-full'>
             <Tittle 
@@ -25,7 +23,7 @@ function Hero() {
           </p>
 
           <div className='flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-8'>
-            {/* Join Button */}
+    \
             <button className="h-14 sm:h-16 text-lg sm:text-lg md:text-xl relative overflow-hidden bg-gradient-to-r from-[#F48C06] to-[#d97706] text-white px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 group">
               <span className="absolute inset-0 bg-gradient-to-r from-[#d97706] to-[#F48C06] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               <span className="relative z-10">Join for free</span>
@@ -46,7 +44,6 @@ function Hero() {
           </div>
         </div>
 
-        {/* Right Image */}
         <div className="w-full sm:w-1/2 mb-8 sm:mb-0">
           <img 
             className='w-full mx-auto sm:mx-0' 
